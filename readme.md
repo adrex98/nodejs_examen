@@ -340,7 +340,7 @@ La función getUserDetails en el controlador userDetails.controller.js se encarg
 
 Este proyecto utiliza PostgreSQL como base de datos. Asegúrate de haber configurado correctamente la base de datos y aplicado las migraciones antes de ejecutar la aplicación.
 
-## Capturas de Pantalla
+## View de la BD
 
 ![Captura de Pantalla 1](https://i.imgur.com/KB5IKRW.png)
 
