@@ -358,4 +358,3 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 ## Autor
 
 - Adrian Victor Montesinos Salinas
-- Contacto: adrianmontesinos98@gmail.com
