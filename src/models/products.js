@@ -1,5 +1,4 @@
-// models/usuarios.js
-// import Sequelize from 'sequelize';
+// models/products.js
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../config/database.js';
 

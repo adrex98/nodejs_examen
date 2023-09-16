@@ -1,3 +1,4 @@
+// models/categories.js
 import { DataTypes } from 'sequelize';
 import { sequelize  } from '../config/database.js';
 import Products from './products.js';

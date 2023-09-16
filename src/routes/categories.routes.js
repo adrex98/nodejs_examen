@@ -6,13 +6,9 @@ const router = Router();
 
 //Routes
 router.get('/', validarToken, getCategories);
-
 router.post('/', validarToken, createCategory);
-
 router.put('/:id', validarToken, updateCategory);
-
 router.delete('/:id', validarToken, deleteCategory);
-
 router.get('/:id', validarToken, getCategoryById);
 
 export default router;

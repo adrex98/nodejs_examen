@@ -8,7 +8,7 @@ async function main() {
 
   try {
     // Puedes realizar configuraciones adicionales antes de iniciar el servidor aquí, si es necesario.
-    await sequelize.sync({force: false}); //change false to true, to create for the first time the DB.
+    await sequelize.sync({force: false}); //Cambiar el valor de falso a verdadero para crear la BD por primera vez.
     app.listen(port, () => {
       console.log(`Servidor escuchando en el puerto ${port}`);
     });

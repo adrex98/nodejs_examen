@@ -3,7 +3,7 @@
 // const secretKey = process.env.SECRET_KEY;
 
 // export const validarToken = (req, res, next) => {
-//   const token = req.header('Authorization'); // Suponemos que el token se envía en el encabezado 'x-auth-token'
+//   const token = req.header('Authorization');
 
 //   if (!token) {
 //     return res.status(401).json({ mensaje: 'Acceso denegado. Token no proporcionado.' });
@@ -53,11 +53,11 @@ export const validarToken = (req, res, next) => {
 
 // passport.use(
 //   new JwtStrategy(jwtOptions, (jwtPayload, done) => {
-//     // jwtPayload contiene los datos decodificados del token
-//     // Puedes realizar más verificaciones aquí si es necesario
-//     // Por ejemplo, verificar si el usuario existe en la base de datos
+//    
+//    
+//    
 
-//     // Si todo está bien, pasa el usuario al siguiente middleware o controlador
+//     
 //     return done(null, jwtPayload);
 //   })
 // );

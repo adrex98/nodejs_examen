@@ -2,8 +2,8 @@ import { Categories } from '../models/categories.js';
 
 // Función para verificar si un usuario tiene permisos de administrador
 const esAdmin = (req) => {
-    // Supongamos que en el token JWT se almacena información sobre el rol del usuario
-    const usuario = req.usuario; // Aquí debes extraer la información del usuario del token
+    // El token JWT se almacena información sobre el rol del usuario
+    const usuario = req.usuario; // Aquí se extrae la información del usuario del token
   
     // Verificar si el usuario tiene permisos de administrador
     if (usuario && usuario.role === 'admin') {

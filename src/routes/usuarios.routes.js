@@ -10,13 +10,9 @@ router.post('/registrar', registrarUsuario);
 router.post('/login', iniciarSesion);
 
 //Rutas Adicionales
-
 router.get('/', validarToken, getUsuario);
-
 router.put('/:id', validarToken, updateUsuario);
-
 router.delete('/:id', validarToken, deleteUsuario);
-
 router.get('/:id', validarToken, getUsuarioById);
 
 export default router;
