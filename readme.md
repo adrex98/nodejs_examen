@@ -79,6 +79,13 @@ CORS_HOST=http://localhost:3000
 
 A continuación, se describen los pasos para utilizar la API y se proporcionan ejemplos de comandos y código para cada uno de los endpoints.
 
+## Endpoints de la API
+
+- `/api/usuarios`: Endpoint para gestionar usuarios.
+- `/api/products`: Endpoint para gestionar productos.
+- `/api/categories`: Endpoint para gestionar categorías.
+- `/api/userDetails/`: Endpoint para recopilar los productos y categorias creado por un usuario en especifico.
+
 ### Autenticación de Usuarios
 
 #### Registro de un Nuevo Usuario
@@ -112,7 +119,8 @@ curl -X POST -H "Content-Type: application/json" -d '{
 ```
 ### Gestion de Usuarios
 
-Obtener Todos los Usuarios (Requiere JWT)
+#### Obtener Todos los Usuarios (Requiere JWT)
+
 Para obtener todos los usuarios registrados, realiza una solicitud GET a la siguiente URL:
 
 ```bash
@@ -173,8 +181,6 @@ curl -X DELETE -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKI
 ### Gestion de Productos
 
 #### Crear un Nuevo Producto (Requiere JWT)
-
-Crear un Nuevo Producto (Requiere JWT)
 
 ```bash
 POST /api/products
@@ -314,11 +320,27 @@ curl -X DELETE -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKI
 
 Asegúrate de reemplazar PUERTO, TU_JWT y VALOR_DE_LA_COOKIE con los valores adecuados en cada solicitud.
 
-## Endpoints de la API
+### Gestión de UserDetails
 
-- `/api/usuarios`: Endpoint para gestionar usuarios.
-- `/api/products`: Endpoint para gestionar productos.
-- `/api/categories`: Endpoint para gestionar categorías.
+#### Obtener Categorías y Productos de un Usuario (Requiere JWT)
+
+Para obtener todas las categorías y productos creados por un usuario específico, realiza una solicitud GET a la siguiente URL, reemplazando ID_DEL_USUARIO con el ID del usuario:
+
+```bash
+GET /api/userDetails/ID_DEL_USUARIO
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" http://localhost:PUERTO/api/userDetails/ID_DEL_USUARIO
+```
+
+Asegúrate de reemplazar PUERTO, TU_JWT y VALOR_DE_LA_COOKIE con los valores adecuados en cada solicitud.
+
+Esta solicitud devolverá los detalles del usuario, incluyendo todas las categorías y productos que ha creado. La respuesta incluirá la información de las categorías y productos, como sus nombres, precios, etc.
+
+La función getUserDetails en el controlador userDetails.controller.js se encargará de buscar al usuario por su ID y recuperar las categorías y productos asociados a él.
 
 ## Base de Datos
 
