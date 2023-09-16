@@ -23,12 +23,6 @@ El proyecto [nombre del proyecto] es una aplicación web basada en Node.js que p
 - Autenticación de Usuarios con JWT.
 - CRUD de Usuarios, Categorías y Productos.
 - API para obtener las creaciones de un usuario.
-- Estructura de la aplicación conforme a la imagen adjunta.
-
-## Capturas de Pantalla
-
-![Captura de Pantalla 1](https://imgur.com/a/Xerby75)
-
 
 ## Tecnologías Utilizadas
 
@@ -345,6 +339,11 @@ La función getUserDetails en el controlador userDetails.controller.js se encarg
 ## Base de Datos
 
 Este proyecto utiliza PostgreSQL como base de datos. Asegúrate de haber configurado correctamente la base de datos y aplicado las migraciones antes de ejecutar la aplicación.
+
+## Capturas de Pantalla
+
+![Captura de Pantalla 1](https://i.imgur.com/KB5IKRW.png)
+
 
 ## Contribución
 
