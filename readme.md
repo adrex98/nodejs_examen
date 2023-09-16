@@ -193,6 +193,127 @@ curl -X POST -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE"
 
 Para obtener todos los productos, realiza una solicitud GET a la siguiente URL:
 
+```bash
+GET /api/products
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" http://localhost:PUERTO/api/products
+```
+
+#### Obtener Detalles de un Producto (Requiere JWT)
+\
+Para obtener los detalles de un producto por su ID, realiza una solicitud GET a la siguiente URL, reemplazando ID_DEL_PRODUCTO con el ID del producto:
+
+```bash
+GET /api/products/ID_DEL_PRODUCTO
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" http://localhost:PUERTO/api/products/ID_DEL_PRODUCTO
+```
+
+#### Actualizar un Producto (Requiere JWT)
+
+Para actualizar los datos de un producto, realiza una solicitud PUT a la siguiente URL, reemplazando ID_DEL_PRODUCTO con el ID del producto:
+
+```bash
+PUT /api/products/ID_DEL_PRODUCTO
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -X PUT -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" -H "Content-Type: application/json" -d '{
+  "name": "Nuevo Nombre de Producto",
+  "unit_price": 150
+}' http://localhost:PUERTO/api/products/ID_DEL_PRODUCTO
+```
+
+Recuerda reemplazar PUERTO, TU_JWT y VALOR_DE_LA_COOKIE con los valores adecuados.
+
+### Gestión de Categorías
+
+#### Crear una Nueva Categoría (Requiere JWT)
+
+Para crear una nueva categoría, realiza una solicitud POST a la siguiente URL:
+
+```bash
+POST /api/categories
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -X POST -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" -H "Content-Type: application/json" -d '{
+  "name": "Nombre de la Categoría"
+}' http://localhost:PUERTO/api/categories
+```
+
+#### Obtener Todas las Categorías (Requiere JWT)
+
+Para obtener todas las categorías, realiza una solicitud GET a la siguiente URL:
+
+```bash
+GET /api/categories
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" http://localhost:PUERTO/api/categories
+```
+
+#### Obtener Detalles de una Categoría (Requiere JWT)
+
+Para obtener los detalles de una categoría por su ID, realiza una solicitud GET a la siguiente URL, reemplazando ID_DE_LA_CATEGORÍA con el ID de la categoría:
+
+```bash
+GET /api/categories/ID_DE_LA_CATEGORÍA
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" http://localhost:PUERTO/api/categories/ID_DE_LA_CATEGORÍA
+```
+
+#### Actualizar una Categoría (Requiere JWT)
+
+Para actualizar los datos de una categoría, realiza una solicitud PUT a la siguiente URL, reemplazando ID_DE_LA_CATEGORÍA con el ID de la categoría:
+
+```bash
+PUT /api/categories/ID_DE_LA_CATEGORÍA
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -X PUT -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" -H "Content-Type: application/json" -d '{
+  "name": "Nuevo Nombre de Categoría"
+}' http://localhost:PUERTO/api/categories/ID_DE_LA_CATEGORÍA
+```
+
+#### Eliminar una Categoría (Requiere JWT)
+
+Para eliminar una categoría, realiza una solicitud DELETE a la siguiente URL, reemplazando ID_DE_LA_CATEGORÍA con el ID de la categoría:
+
+```bash
+DELETE /api/categories/ID_DE_LA_CATEGORÍA
+```
+
+Ejemplo de solicitud utilizando cURL (requiere JWT y cookie de sesión):
+
+```bash
+curl -X DELETE -H "Authorization: Bearer TU_JWT" -b "tu_cookie=VALOR_DE_LA_COOKIE" http://localhost:PUERTO/api/categories/ID_DE_LA_CATEGORÍA
+```
+
+Asegúrate de reemplazar PUERTO, TU_JWT y VALOR_DE_LA_COOKIE con los valores adecuados en cada solicitud.
+
 ## Endpoints de la API
 
 - `/api/usuarios`: Endpoint para gestionar usuarios.
