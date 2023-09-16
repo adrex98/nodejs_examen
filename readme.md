@@ -213,15 +213,7 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 4. Sube tus cambios a tu fork (`git push origin feature/nueva-funcionalidad`).
 5. Abre un pull request en este repositorio.
 
-## Licencia
-
-Este proyecto está bajo la licencia [Nombre de la Licencia]. Consulta el archivo LICENSE.md para obtener más detalles.
-
 ## Autor
 
-- Nombre del Autor
-- Contacto: tu@email.com
-
-## Agradecimientos
-
-- Menciona agradecimientos o referencias a recursos que hayas utilizado.
+- Adrian Victor Montesinos Salinas
+- Contacto: adrianmontesinos98@gmail.com
