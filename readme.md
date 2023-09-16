@@ -2,7 +2,7 @@
 
 ## Descripción
 
-El proyecto [nombre del proyecto] es una aplicación web basada en Node.js que proporciona una plataforma para gestionar usuarios, categorías y productos. La aplicación sigue la estructura mostrada en la imagen adjunta y cumple con los siguientes requerimientos:
+El proyecto es una aplicación web basada en Node.js que proporciona una plataforma para gestionar usuarios, categorías y productos. La aplicación y cumple con los siguientes requerimientos:
 
 - **Autenticación de Usuarios:** La aplicación permite a los usuarios registrarse, iniciar sesión y obtener un JWT (JSON Web Token) después de la autenticación.
 
@@ -340,7 +340,7 @@ La función getUserDetails en el controlador userDetails.controller.js se encarg
 
 Este proyecto utiliza PostgreSQL como base de datos. Asegúrate de haber configurado correctamente la base de datos y aplicado las migraciones antes de ejecutar la aplicación.
 
-## View de la BD
+## View de la Base de Datos
 
 ![Captura de Pantalla 1](https://i.imgur.com/KB5IKRW.png)
 
