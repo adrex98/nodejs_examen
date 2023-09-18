@@ -11,17 +11,18 @@ export const getUserDetails = async (req, res) => {
     const userDetails = await Usuario.findOne({
       where: { id: userId },
       include: [
-        {
-          model: Categories,
-          attributes: ['id', 'name'], // Puedes seleccionar los atributos que deseas mostrar
-        },
-        {
-          model: Products,
-          attributes: ['id', 'name', 'unit_price'], // Puedes seleccionar los atributos que deseas mostrar
-        },
-      ],
-    });
-
+      {
+      model: Categories,
+      attributes: ['id', 'name'], // Puedes seleccionar los atributos que deseas mostrar
+      include: [
+      {
+      model: Products,
+      attributes: ['id', 'name', 'unit_price'], // Puedes seleccionar los atributos que deseas mostrar
+      },
+    ],
+   },
+  ],
+});
     if (!userDetails) {
       return res.status(404).json({ mensaje: 'Usuario no encontrado' });
     }
